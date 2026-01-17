@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  mongo:
+    image: mongo
+
+  redis:
+    image: redis
+
+  auth:
+    build: ./auth_service
+
+  product:
+    build: ./product_service
+
+  cart:
+    build: ./cart_service
+
+  order:
+    build: ./order_service
